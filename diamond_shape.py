@@ -23,5 +23,8 @@ def print_diamond(n):
 
 
 # Test print_diamond function with user input
-input_integer = int(input("Enter an odd integer: "))
-print_diamond(input_integer)
+try:
+    input_integer = int(input("Enter an odd integer: "))
+    print_diamond(input_integer)
+except:
+    print("Error: Invalid input. Please enter a valid integer.")
