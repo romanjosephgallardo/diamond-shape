@@ -6,8 +6,20 @@ Note: If an even number is passed, the function should return "Please provide an
 
 # pseudocode
 
-# define print_diamond function
-# if n is even
-#   print "Please provide an odd integer."
-# if n is odd
-#   print n lines of n characters "*"                                     
+# Define print_diamond function
+def print_diamond(n):
+    # If n is even
+        if n % 2 == 0:
+            # Print "Please provide an odd integer."
+            print("Please provide an odd integer.")
+            return 
+        # If n is odd
+        if n % 2 != 0:
+            # Print n lines of n characters "*" on each line
+            for i in range(n//2 + 1):
+                print(" " * (n//2 - i) + "*" * (2 * i + 1))
+            for i in range(n//2 -1, -1, -1):
+                print(" " * (n//2 - i) + "*" * (2 * i + 1))
+            print()
+
+print_diamond(5)
