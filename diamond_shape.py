@@ -12,7 +12,6 @@ def print_diamond(n):
         if n % 2 == 0:
             # Print "Please provide an odd integer."
             print("Please provide an odd integer.")
-            return 
         # If n is odd
         if n % 2 != 0:
             # Print n lines of n characters "*" on each line
@@ -22,4 +21,7 @@ def print_diamond(n):
                 print(" " * (n//2 - i) + "*" * (2 * i + 1))
             print()
 
-print_diamond(5)
+
+# Test print_diamond function with user input
+input_integer = int(input("Enter an odd integer: "))
+print_diamond(input_integer)
